@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react'
 import { View, Text } from 'react-native'
 import { useDispatch, useSelector } from 'react-redux'
-import { fetchMarker, markerSelector } from './MapSlice'
+import { fetchMarker, markerSelector } from './MarkerSlice'
 import MapComponent from '../component/MapComponent'
+import BottomCard from '../component/BottomCard'
 
 function HomeScreen() {
     const dispatch = useDispatch()
@@ -12,9 +13,7 @@ function HomeScreen() {
     })
     return <View>
         <MapComponent />
-        <View>
-
-        </View>
+        <BottomCard style={{ width: 100, height: 100, backgroundColor: 'black', position: 'absolute', bottom:0}} />
     </View>
 }
 
